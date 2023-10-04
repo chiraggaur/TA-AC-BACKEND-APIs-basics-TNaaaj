@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Store</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/" style="text-decoration: none"><h2>Home</h2></a>
+      </div>
+      <h1>Book Store App</h1>
+      <div>
+        <nav>
+          <a href="/book/new" style="text-decoration: none"
+            ><h2>List Book</h2></a
+          >
+        </nav>
+      </div>
+    </header>
+    <div id="commentBox">
+      <form action="/api/comments/<%=commentsData.id%>/update" method="POST">
+        <textarea cols="30" name="comment" rows="10" placeholder="addComments!">
+  <%=commentsData.comment%> </textarea
+        >
+        <input type="submit" />
+      </form>
+    </div>
+  </body>
+</html>

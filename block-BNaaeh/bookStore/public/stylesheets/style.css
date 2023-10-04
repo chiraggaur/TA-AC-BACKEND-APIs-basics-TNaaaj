@@ -1,0 +1,49 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+header {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid black;
+}
+.listAllBooks {
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+  margin-left: 650px;
+  border-radius: 5px;
+  margin-top: 300px;
+}
+.bookForm {
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid black;
+  margin: 200px auto;
+}
+/* booksList */
+.listingBooks {
+  width: 300px;
+  height: 30px;
+  margin-left: 200px;
+  margin-top: 50px;
+  font-size: 24px;
+  /* border: 2px solid black; */
+}
+#commentBox {
+  width: 400px;
+  height: 100px;
+  /* border: 2px solid black; */
+  margin-top: 100px;
+}

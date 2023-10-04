@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Store</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/" style="text-decoration: none"><h2>Home</h2></a>
+      </div>
+      <h1>Book Store App</h1>
+      <div>
+        <nav>
+          <a href="/api/books/form" style="text-decoration: none"
+            ><h2>List Book</h2></a
+          >
+        </nav>
+      </div>
+    </header>
+    <ul class="listingBooks">
+      <% BooksData.forEach((elm)=>{%>
+      <a href="/api/books/<%=elm.id%>" style="text-decoration: none"
+        ><li><%=elm.title %></li></a
+      >
+      <% })%>
+    </ul>
+  </body>
+</html>

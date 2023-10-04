@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Store</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/" style="text-decoration: none"><h2>Home</h2></a>
+      </div>
+      <h1>Book Store App</h1>
+      <div>
+        <nav>
+          <a href="/book/new" style="text-decoration: none"
+            ><h2>List Book</h2></a
+          >
+        </nav>
+      </div>
+    </header>
+    <ul>
+      <div>
+        <label style="color: blue; font-size: 18px">Title : </label>
+        <h1 style="display: inline"><%=BookData.title %></h1>
+      </div>
+      <div>
+        <label style="color: blue; font-size: 18px"> Name :</label>
+        <h3 style="display: inline"><%=BookData.name %></h3>
+      </div>
+      <div>
+        <label style="color: blue; font-size: 18px"> Summary :</label>
+        <p style="display: inline"><%=BookData.summary %></p>
+      </div>
+    </ul>
+    <a href="/api/books/edit/<%=BookData.id%>"><button>edit</button></a>
+    <a href="/api/books/delete/<%=BookData.id%>"><button>Delete</button></a>
+    <div id="commentBox">
+      <form action="/api/comments/<%=BookData.id%>" method="POST">
+        <textarea
+          cols="30"
+          name="comment"
+          rows="10"
+          placeholder="addComments!"
+        ></textarea>
+        <input type="submit" />
+      </form>
+      <div class="commentsArea">
+        <h2>Comments</h2>
+        <ul>
+          <%CommentsData.forEach((elm)=>{ %>
+          <li><%= elm.comment %></li>
+          <a href="/api/comments/<%=elm.id%>/edit"><button>edit</button> </a>
+          <a href="/api/comments/<%=elm.id%>/delete"
+            ><button>Delete</button>
+          </a>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

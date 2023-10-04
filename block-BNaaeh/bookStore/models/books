@@ -1,0 +1,14 @@
+var express = require("express");
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const bookSchema = new Schema({
+  author: Schema.Types.ObjectId,
+  comments: Schema.Types.ObjectId,
+  title: { type: String },
+  name: { type: String },
+  summary: { type: String },
+});
+
+const MyModel = mongoose.model("BOOKS", bookSchema);
+module.exports = MyModel;

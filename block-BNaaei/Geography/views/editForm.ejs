@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Country Form</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/" style="text-decoration: none; color: green"
+          ><h1 class="list_Country">Country</h1></a
+        >
+      </div>
+      <div>
+        <a href="/Form" style="text-decoration: none; color: green"
+          ><nav class="list_Country">List Country</nav></a
+        >
+      </div>
+    </header>
+    <form action="/<%=data.id%>/update" method="POST">
+      <div>
+        <label for=""> Name </label>
+        <input
+          id=""
+          type="text"
+          name="name"
+          placeholder="Name"
+          value="<%=data.name%>"
+        />
+      </div>
+      <div>
+        <label for="">Continent</label>
+        <input
+          id=""
+          type="text"
+          name="continent"
+          placeholder="Continent"
+          value="<%=data.continent%>"
+        />
+      </div>
+      <div>
+        <label for="">Population</label>
+        <input
+          id=""
+          type="text"
+          name="population"
+          placeholder="Population"
+          value="<%=data.population%>"
+        />
+      </div>
+      <div>
+        <label for="">Ethinicity</label>
+        <input
+          id=""
+          type="text"
+          name="ethinicity"
+          placeholder="Ethinicity"
+          value="<%=data.ethinicity%>"
+        />
+      </div>
+      <div>
+        <label for="">Area</label>
+        <input
+          id=""
+          type="text"
+          name="area"
+          placeholder="Area"
+          value="<%=data.area%>"
+        />
+      </div>
+      <input type="submit" placeholder="submit" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Country Info</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/" style="text-decoration: none; color: green"
+          ><h1 class="list_Country">Country</h1></a
+        >
+      </div>
+      <div>
+        <a href="/Form" style="text-decoration: none; color: green"
+          ><nav class="list_Country">List Country</nav></a
+        >
+      </div>
+    </header>
+    <div class="country_Data">
+      <p class="label_names">Country Name</p>
+      <a
+        href="/states/<%=countrydata.id%>/Form"
+        style="text-decoration: none; font-size: 20px"
+        ><nav>Insert State details</nav></a
+      >
+      <h2><%=countrydata.name%></h2>
+      <p class="label_names">Country continent</p>
+      <h2><%=countrydata.continent%></h2>
+      <p class="label_names">Country population</p>
+      <h2><%=countrydata.population%></h2>
+      <p class="label_names">Country state</p>
+      <h2><%=countrydata.area%></h2>
+      <div>
+        <a href="/<%=countrydata.id%>/edit"><button>update</button></a>
+        <a href="/<%=countrydata.id%>/delete"><button>delete</button></a>
+      </div>
+      <div class="states_List">
+        <a href="/<%=countrydata.id%>" style="text-decoration: none"
+          >List of States in <%=countrydata.name%></a
+        >
+      </div>
+      <div class="country_Data">
+        <ul>
+          <% stateData.forEach((state)=>{%>
+          <a href="//" style="text-decoration: none"
+            ><li style="list-style: none; font-size: 22px; margin-top: 20px">
+              <%= state.name%>
+            </li></a
+          >
+          <%})%>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
